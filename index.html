@@ -70,7 +70,12 @@
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD",
-            "availability": "http://schema.org/InStock"
+            "availability": "http://schema.org/InStock",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
         },
         "creator": {
             "@type": "Organization",
@@ -88,14 +93,15 @@
         "screenshot": {
             "@type": "ImageObject",
             "url": "https://webptopng.itisuniqueofficial.com/images/webp-to-png-screenshot.jpg",
-            "width": "1755",
-            "height": "1367",
+            "width": "1200",
+            "height": "630",
             "caption": "Screenshot of WebP to PNG Converter Tool"
         },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",
             "reviewCount": "150",
+            "ratingCount": "150",
             "bestRating": "5",
             "worstRating": "1"
         }
@@ -190,8 +196,22 @@
             <meta itemprop="url" content="https://webptopng.itisuniqueofficial.com">
             <meta itemprop="applicationCategory" content="GraphicsSoftware">
             <meta itemprop="operatingSystem" content="Web">
-            <meta itemprop="offers" content="Free, no cost">
-            <meta itemprop="aggregateRating" content="4.8 out of 5 based on 150 reviews">
+            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="price" content="0">
+                <meta itemprop="priceCurrency" content="USD">
+                <meta itemprop="availability" content="http://schema.org/InStock">
+                <div itemprop="priceSpecification" itemscope itemtype="https://schema.org/PriceSpecification">
+                    <meta itemprop="price" content="0">
+                    <meta itemprop="priceCurrency" content="USD">
+                </div>
+            </div>
+            <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                <meta itemprop="ratingValue" content="4.8">
+                <meta itemprop="ratingCount" content="150">
+                <meta itemprop="reviewCount" content="150">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="worstRating" content="1">
+            </div>
             <div class="control-group">
                 <label for="imageInput">Upload Your WebP Image</label>
                 <input type="file" id="imageInput" accept="image/webp" required aria-describedby="upload-help">
